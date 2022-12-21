@@ -8,5 +8,8 @@ class Square:
 
 
 def __init__(self, size):
-    """initialize with arg size which will be made private"""
+    """Initialize a new Square.
+        Args:
+            size (int): The size of the new square.
+    """
     self.__size = size

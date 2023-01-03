@@ -1,0 +1,57 @@
+Test cases for 0-add_integer module
+===================================
+
+The 0-add_integer module takes two integers or floats as arguments and returns their sum
+
+Usage
+=====
+
+Importing function from the module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+# Valid test arguments
+    >>> add_integer(4, 7)
+    11
+    >>> add_integer(5)
+    103
+    >>> add_integer(2.2, 6.8)
+    8
+
+# Test for invalid arguments
+    >>> try:
+    ...     add_integer('3', 3)
+    ... except TypeError as ex:
+    ...     print(ex.args[0])
+    a must be an integer
+
+    >>> try:
+    ...     add_integer(('3'), 3)
+    ... except TypeError as ex:
+    ...     print(ex.args[0])
+    a must be an integer
+    >>> try:
+    ...     add_integer(3, None)
+    ... except TypeError as ex:
+    ...     print(ex.args[0])
+    b must be an integer
+    >>> try:
+    ...     add_integer(3, '4')
+    ... except TypeError as ex:
+    ...     print(ex.args[0])
+    b must be an integer
+    >>> try:
+    ...     add_integer(float('inf'), float('inf'))
+    ... except Exception as ex:
+    ...     print(ex.args[0])
+    cannot convert float infinity to integer
+    >>> try:
+    ...     add_integer(float('inf'), 4)
+    ... except Exception as ex:
+    ...     print(ex.args[0])
+    cannot convert float infinity to integer
+    >>> try:
+    ...     add_integer(float('NaN'), 5)
+    ... except Exception as ex:
+    ...     print(ex.args[0])
+    cannot convert float NaN to integer
+

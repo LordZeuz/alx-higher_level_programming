@@ -74,16 +74,16 @@ class Rectangle:
             return (rect_1)
         return (rect_2)
 
-     @classmethod
-     def square(cls, size=0):
-         """ Method that returns a new instance of Rectangle class
+    @classmethod
+    def square(cls, size=0):
+        """ Method that returns a new instance of Rectangle class
         Args:
             cls: rectangle class
             size: rectangle width and rectangle height
         Returns:
             a new instance of Rectangle class
         """
-         return (cls(size, size))
+        return (cls(size, size))
 
     def __str__(self):
         """Return the printable representation of the Rectangle.

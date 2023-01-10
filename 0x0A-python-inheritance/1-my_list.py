@@ -2,9 +2,9 @@
 """A class My_list that inherits """
 
 
-class MyList(List):
+class MyList(list):
     """An inherited class """
 
     def print_sorted(self):
         """print the list in assorted form"""
-    print(sorted(self))
+        print(sorted(self))

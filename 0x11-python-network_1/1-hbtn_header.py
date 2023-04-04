@@ -7,11 +7,12 @@
 import sys
 import urllib.request
 
+if __name__ == "__main__":
 
-url = sys.argv[1]
+    url = sys.argv[1]
 
-req = urllib.request.Request(url)
-req.add_header('X-Request-Id', 'my-unique-id')
-response = urllib.request.urlopen(url)
-request_id = response.getheader('X-Request-ID')
-print(request_id)
+    req = urllib.request.Request(url)
+    req.add_header('X-Request-Id', 'my-unique-id')
+    response = urllib.request.urlopen(url)
+    request_id = response.getheader('X-Request-ID')
+    print(request_id)

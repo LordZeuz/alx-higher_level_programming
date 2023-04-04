@@ -13,4 +13,5 @@ if __name__ == "__main__":
 
     req = urllib.request.Request(url)
     response = urllib.request.urlopen(url)
-    print(response.getheader('X-Request-ID'))
+    feedback = response.headers
+    print(feedback.get('X-Request-ID'))
